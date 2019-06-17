@@ -1,0 +1,313 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600);
+@import url(https://use.fontawesome.com/releases/v5.0.8/css/all.css);
+
+.insta-bio-container {
+  box-sizing: border-box;
+  font-family: "Open Sans", Arial, sans-serif;
+	background-color: #fafafa;
+	color: #262626;
+	max-width: 93.5rem;
+	margin: 0 auto;
+	padding: 0 2rem;
+  background-color: #fff;
+}
+
+.insta-bio-container img {
+	display: block;
+}
+
+.profile {
+  padding: 5rem 0;
+}
+
+.profile:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.profile-image {
+  float: left;
+  width: calc(33.333% - 1rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 3rem;
+}
+
+.profile-image img {
+  border-radius: 50%;
+}
+
+.profile-user-settings,
+.profile-stats,
+.profile-bio {
+	float: left;
+	width: calc(66.666% - 2rem);
+}
+
+.profile-user-settings {
+	margin-top: 1.5rem;
+}
+
+.profile-user-name {
+	display: inline-block;
+	font-size: 28px;
+	font-weight: 300;
+  vertical-align: bottom;
+}
+
+a.profile-edit-btn {
+  background-color:#3897f0;
+	display: inline-block;
+	font-size: 14px;
+	line-height: 1.8;
+	border: 0.1rem solid #3897f0;
+	border-radius: 4px;
+	padding: 2px 9px;
+	margin-left: 2rem;
+	cursor: pointer;
+  color:#fff !important;
+  text-decoration:none;
+}
+
+.profile-stats {
+	margin-top: 2rem;
+}
+
+.profile-stats ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-stats li {
+	display: inline-block;
+	font-size: 16px;
+	line-height: 1.5;
+	margin-right: 4rem;
+	cursor: pointer;
+}
+
+.profile-stats li:last-of-type {
+	margin-right: 0;
+}
+
+.profile-bio {  
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.5;
+	margin-top: 2rem;
+}
+
+.profile-real-name,
+.profile-stat-count,
+.profile-edit-btn {
+	font-weight: 600;
+}
+
+a.external-url {
+  color:#003569 !important;
+  text-decoration:none;
+  font-weight:600;
+}
+
+/* Media Query - do not worked inside another component - resolved with JS*/
+/* @media screen and (max-width: 810px) { */
+
+	.insta-bio-small-display .profile {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 4rem 0;
+	}
+
+	.insta-bio-small-display .profile::after {
+		display: none;
+	}
+
+	.insta-bio-small-display .profile-image,
+	.insta-bio-small-display .profile-user-settings,
+	.insta-bio-small-display .profile-bio,
+	.insta-bio-small-display .profile-stats {
+		float: none;
+		width: auto;
+	}
+
+	.insta-bio-small-display .profile-image img {
+		width: 7.7rem;
+	}
+
+	.insta-bio-small-display .profile-user-settings {
+		flex-basis: calc(100% - 10.7rem);
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 1rem;
+	}
+
+	.insta-bio-small-display .profile-user-name {
+		font-size: 2.2rem;
+	}
+
+	.insta-bio-small-display .profile-edit-btn {
+		order: 1;
+		padding: 0;
+		text-align: center;
+		margin-top: 1rem;
+	}
+
+	.insta-bio-small-display .profile-edit-btn {
+		margin-left: 0;
+	}
+
+	.insta-bio-small-display .profile-bio{
+		font-size: 1.4rem;
+		margin-top: 1.5rem;
+    
+	}
+
+	.insta-bio-small-display .profile-edit-btn,
+	.insta-bio-small-display .profile-bio,
+	.insta-bio-small-display .profile-stats {
+		flex-basis: 100%;
+	}
+
+	.insta-bio-small-display .profile-stats {
+		order: 1;
+		margin-top: 1.5rem;
+	}
+
+	.insta-bio-small-display .profile-stats ul {
+		display: flex;
+		text-align: center;
+		padding: 1.2rem 0;
+		border-top: 0.1rem solid #dadada;
+		border-bottom: 0.1rem solid #dadada;
+	}
+
+	.insta-bio-small-display .profile-stats li {
+		font-size: 1.4rem;
+		flex: 1;
+		margin: 0;
+	}
+
+	.insta-bio-small-display .profile-stat-count {
+		display: block;
+	}
+/* } */
+
+
+/* @supports (display: grid) { */
+	.profile {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		grid-template-rows: repeat(3, auto);
+		grid-column-gap: 3rem;
+		align-items: center;
+	}
+
+	.profile-image {
+		grid-row: 1 / -1;
+	}
+
+
+	.profile-image,
+	.profile-user-settings,
+	.profile-stats,
+	.profile-bio {
+		width: auto;
+/* 		margin: 0; */
+	}
+
+/* 	@media (max-width: 40rem) { */
+		.insta-bio-small-display .profile {
+			grid-template-columns: auto 1fr;
+			grid-row-gap: 1.5rem;
+		}
+
+		.insta-bio-small-display .profile-image {
+			grid-row: 1 / 2;
+		}
+
+		.insta-bio-small-display .profile-user-settings {
+			display: grid;
+			grid-template-columns: auto 1fr;
+			grid-gap: 1rem;
+		}
+
+		.insta-bio-small-display .profile-edit-btn,
+		.insta-bio-small-display .profile-stats,
+		.insta-bio-small-display .profile-bio {
+			grid-column: 1 / -1;
+		}
+
+		.insta-bio-small-display .profile-user-settings,
+		.insta-bio-small-display .profile-edit-btn,
+		.insta-bio-small-display .profile-settings-btn {
+			margin: 0;
+		}
+/* 	} */
+/* } END OF GRID */
+
+
+/* LOADER - Spinner */
+.do-not-display {display:none !important}
+.please-display {display:initial !important}
+
+.spinner-loader-wrapper {
+    display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  width:100vw;
+}
+.spinner {
+	width: 5rem;
+	height: 5rem;
+	border: 0.6rem solid #999;
+	border-bottom-color: transparent;
+	border-radius: 50%;
+	margin: 0 auto;
+  translate: (50%, 50%);
+	animation: spinner 1s linear infinite;
+}
+@keyframes spinner {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.circle {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:absolute;
+  width: 205px;
+}
+.circle svg {
+  position: absolute;
+  fill: none;
+  stroke: #8a3ab9;
+  stroke-linecap: round;
+  stroke-width: 1.5;
+  stroke-dasharray: 0;
+  stroke-dashoffset: 0;
+  animation: stroke-draw 5s ease-out infinite alternate;
+}
+
+@keyframes stroke-draw {
+  from {
+    stroke: #8a3ab9;
+    stroke-dasharray: 0;
+  }
+  to {
+    stroke: #cd486b;
+    transform: rotate(180deg);
+    stroke-dasharray: 0;
+  }
+}
+
+/* @media screen and (max-width: 810px) { */
+  .insta-bio-small-display .circle {
+    width: 170px;
+  }
+/* } */

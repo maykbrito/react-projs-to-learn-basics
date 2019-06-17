@@ -1,0 +1,33 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,600,700);
+
+html, body {
+    margin:0;
+    padding:0;
+  font-family: 'Open Sans';
+
+  -webkit-font-smoothing: antialiased;
+
+}
+
+.header {
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-bottom:1px solid #eee;
+    box-shadow: 0 1px 1px rgba(0, 0,0, 0.055);
+    position:fixed;
+    width: 100%;
+    background-color: white;
+    top:0;
+  }
+  
+  .header h1 {
+    font-weight: 700;
+  }
+  
+  main {
+    margin: 100px auto 30px;
+    max-width: 640px;
+    text-align: center
+  }
