@@ -1,0 +1,81 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600);
+@import url(https://use.fontawesome.com/releases/v5.0.8/css/all.css);
+
+
+body {
+	font-family: "Open Sans", Arial, sans-serif;
+	min-height: 100vh;
+	background-color: #fafafa;
+	color: #262626;
+    padding:0;    
+	padding-bottom: 3rem;
+    margin:0;
+}
+
+
+header {
+    padding:0;
+    margin:0;
+}
+
+header .container {
+    background:white;
+    border-bottom:1px solid #eee;
+    height:80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+    margin-bottom:15px;
+}
+
+.list {
+    background: white;
+    margin: auto;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #efefef;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.15),
+    0 10px 0 -5px #eee,
+    0 10px 1px -4px rgba(0,0,0,0.15),
+    0 20px 0 -10px #eee,
+    0 20px 1px -9px rgba(0,0,0,0.15)    
+}
+
+.item {
+    width: 80%;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 20px 15px;
+    border-bottom: 1px solid #eee;
+    font-weight: 100;
+}
+
+.item:first-child {
+    padding-top:50px;
+}
+
+.item:last-child {
+    padding-bottom:50px;
+}
+
+.category-label {
+    display: flex;
+    justify-content: center;
+}
+
+.category-label span{
+    color:white;
+    background: gray;
+    border-radius: 3px;
+    padding:2px 5px;
+    text-transform: uppercase;
+    font-size:10px;
+    letter-spacing: 1px;
+    box-shadow: 1px 1px 1px #ccc;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
